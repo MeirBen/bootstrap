@@ -285,7 +285,7 @@
       }
       return {
         ...defaultBsPopperConfig,
-        ...index_js.execute(this._config.popperConfig, [defaultBsPopperConfig])
+        ...index_js.execute(this._config.popperConfig, [undefined, defaultBsPopperConfig])
       };
     }
     _selectMenuItem({

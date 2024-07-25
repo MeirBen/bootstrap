@@ -202,7 +202,7 @@
     });
   };
   const execute = (possibleCallback, args = [], defaultValue = possibleCallback) => {
-    return typeof possibleCallback === 'function' ? possibleCallback(...args) : defaultValue;
+    return typeof possibleCallback === 'function' ? possibleCallback.call(...args) : defaultValue;
   };
   const executeAfterTransition = (callback, transitionElement, waitForTransition = true) => {
     if (!waitForTransition) {
